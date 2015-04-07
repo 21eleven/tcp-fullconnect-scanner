@@ -33,8 +33,9 @@ def portScan(tgtHost, tgtPorts):
 		print '\n[+] Scan Results for: ' + tgtName[0]
 	except:
 		print '\n[+] Scan Results for: ' + tgtIP
+
 	setdefaulttimeout(1)
-	print tgtPorts
+
 	for tgtPort in tgtPorts:
 		intPort = int(tgtPort)
 		t = Thread(target=connScan, args=(tgtHost, intPort))
